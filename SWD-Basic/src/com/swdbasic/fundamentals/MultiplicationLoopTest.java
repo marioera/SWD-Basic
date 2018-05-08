@@ -4,9 +4,9 @@ public class MultiplicationLoopTest {
 	public static void main(String args[]) {
 		Multiplication m = new Multiplication();
 		int a = -50;
-		while (a <= 50) {
+		while (a <= 100) {
 			int b = -10;
-			while (b <= 10) {
+			while (b <= 50) {
 				int expected = a * b;
 				int actual = m.mult(a, b);
 				if (actual == expected) {

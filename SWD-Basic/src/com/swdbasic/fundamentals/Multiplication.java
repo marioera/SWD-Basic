@@ -21,10 +21,37 @@ public class Multiplication {
 		return total;
 	}
 
-	public int mult_Myriam(int a, int b) {
+	/* Myriam */
+	public int functionwhile(int tipo, int a, int b) {
+
 		int count = 0;
 		int divi, multi;
 		int c = 0;
+		int bAux = b;
+		int d = 0;
+
+		while (a != 1) {
+
+			divi = (a >> 1);
+			multi = (b << 1);
+			count++;
+			a = divi;
+			b = multi;
+
+			if (a % 2 != 0) {
+				c = c + multi;
+			}
+
+			if (tipo == 1) {
+				d = c;
+			} else {
+				d = c + bAux;
+			}
+		}
+		return d;
+	}
+
+	public int mult_Myriam(int a, int b) {
 		int bAux = b;
 		int d = 0;
 
@@ -39,37 +66,15 @@ public class Multiplication {
 			}
 
 			if (a % 2 == 0) {
-				while (a != 1) {
-
-					divi = (a >> 1);
-					multi = (b << 1);
-					count++;
-					a = divi;
-					b = multi;
-
-					if (a % 2 != 0) {
-						c = c + multi;
-					}
-					d = c;
-				}
+				d = functionwhile(1, a, b);
 			} else {
-				while (a != 1) {
-					divi = (a >> 1);
-					multi = (b << 1);
-
-					count++;
-					a = divi;
-					b = multi;
-
-					if (a % 2 != 0) {
-						c = c + multi;
-					}
-					d = c + bAux;
-				}
+				d = functionwhile(2, a, b);
 			}
 		}
 		return d;
 	}
+
+	/* FIN - Myriam */
 
 	public int mult_Sandra(int a, int b) {
 		int resultb = 0;
