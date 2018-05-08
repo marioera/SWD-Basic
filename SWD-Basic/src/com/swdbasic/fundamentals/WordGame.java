@@ -8,7 +8,7 @@ public class WordGame {
 		while (count <= maxNumber) {
 			if (count % 3 == 0) {
 				token = word1;
-			} 
+			}
 			if (count % 5 == 0) {
 				token += word2;
 			}
@@ -20,10 +20,4 @@ public class WordGame {
 			count++;
 		}
 	}
-	
-	public static void main(String[] args) {
-		WordGame wg = new WordGame();
-		wg.play(30, "Marco", "Polo");
-	}
-	
 }
