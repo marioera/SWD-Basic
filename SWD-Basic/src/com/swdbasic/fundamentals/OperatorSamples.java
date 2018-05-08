@@ -41,6 +41,57 @@ public class OperatorSamples {
 		double z2 = 5 + 6/3 + 5;
 		z2++;
 		System.out.println("z: " + z2);
+		
+		int temp1 = 5;
+		int temp2 = 10;
+		int temp3 = temp1++ + ++temp2;
+		System.out.println("temp3: " + temp3);
+		
+		int monthNumber = 10;
+		String month = "";
+		switch(monthNumber) {
+			case 1:
+				month = "January";
+				break;
+			case 2:
+				month = "February";
+				break;
+			case 3:
+				month = "March";
+				break;
+			case 4:
+				month = "April";
+				break;
+			case 5:
+				month = "May";
+				break;
+			case 6:
+				month = "June";
+				break;
+			case 7:
+				month = "July";
+				break;
+			case 8:
+				month = "August";
+				break;
+			case 9:
+				month = "September";
+				break;
+			case 10:
+				month = "October";
+				break;
+			case 11:
+				month = "November";
+				break;
+			case 12:
+				month = "December";
+				break;
+			default:
+				month = "Not valid month";
+				break;
+		}
+		
+		System.out.println(month);
 	}
 }
 
