@@ -2,24 +2,18 @@ package com.swdbasic.fundamentals;
 
 public class DecimalToBinary {
 
-	public String toBinary1(int decimal) {
+	public String toBinary(int decimal) {
 		StringBuilder sb = new StringBuilder();
 
-		if (decimal == 0) {
-			return "0";
-		}
-		
-		int temp = decimal;
-
-		while(temp > 0) {
-			sb.append(temp % 2);
-			temp /= 2;
-		}		
+		do {
+			sb.append(decimal % 2);
+			decimal /= 2;
+		} while(decimal > 0);		
 		
 		return sb.reverse().toString();
 	}
 
-	public String toBinary(int decimal) {
+	public String toBinary2(int decimal) {
 		StringBuilder sb = new StringBuilder();
 		
 		if (decimal == 0) {
