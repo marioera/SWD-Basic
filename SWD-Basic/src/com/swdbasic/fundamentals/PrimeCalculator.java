@@ -6,6 +6,7 @@ public class PrimeCalculator {
 		long startTime = System.nanoTime();
 		
 		long stepCount = 0;
+		int count = 0;
 		
 		for(int n = min; n <= max; n++) {
 			boolean isPrime = true;
@@ -25,7 +26,7 @@ public class PrimeCalculator {
 			}
 			
 			if (isPrime) {
-				System.out.println(n);
+				System.out.println(count++ + " " + n);
 			}
 		}
 
@@ -34,7 +35,7 @@ public class PrimeCalculator {
 	
 	public static void main(String[] args) {
 		PrimeCalculator pc = new PrimeCalculator();
-		pc.printPrimes(1, 100000);
+		pc.printPrimes(1, 1000000);
 	}
 
 }
