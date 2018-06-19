@@ -3,8 +3,6 @@ package com.swdbasic.fundamentals;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.swdbasic.fundamentals.Multiplication;
-
 public class MultiplicationTest {
 
 	Multiplication m = new Multiplication();
